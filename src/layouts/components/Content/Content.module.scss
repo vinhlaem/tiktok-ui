@@ -1,0 +1,103 @@
+.wrapper {
+  padding: 20px 0;
+
+  width: 592px;
+  max-width: 592px;
+}
+
+.video-info {
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+}
+.user-info {
+  display: flex;
+}
+.user-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  margin-left: 12px;
+}
+
+.name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.check {
+  margin-left: 6px;
+  color: rgb(32, 213, 236);
+}
+
+.username {
+  margin-left: 6px;
+  font-size: 1.4rem;
+  color: rgba(22, 24, 35, 0.5);
+}
+.decription {
+  margin-left: 12px;
+}
+.content-post {
+  display: block;
+}
+
+.btn {
+  min-width: 88px;
+  height: 40px;
+}
+.info-song {
+  margin-left: 10px;
+}
+.container {
+  display: flex;
+  align-items: flex-end;
+}
+.video {
+  display: block;
+  max-width: 80%;
+  max-height: 500px;
+  margin-left: 65px;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.reaction {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  background-color: transparent;
+}
+.like-quantity {
+  display: block;
+}
+.icon {
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(22, 24, 35, 0.06);
+  width: 48px;
+  height: 48px;
+}
+.count {
+  color: rgba(22, 24, 35, 0.75);
+  font-size: 15px;
+  line-height: 17px;
+  text-align: center;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
