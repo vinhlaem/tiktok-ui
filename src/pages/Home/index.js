@@ -23,7 +23,7 @@ const datas = [
     avt: 'https://scontent.fdad1-2.fna.fbcdn.net/v/t39.30808-6/278265548_3206709282934097_3997547185734587438_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=wsVu8IwkLt8AX-NZio1&_nc_ht=scontent.fdad1-2.fna&oh=00_AT-9ByaYcPt5o8qo-WyOUkqzJdZ6exeYuCK6GTZzON54Uw&oe=62C80133',
     userName: 'minhnguyet123',
     content: 'lên lên lên',
-    like_qty: 0,
+    like_qty: 100,
     share_qty: 0,
     cmt_qty: 0,
     video_url: '/static/media/tải xuống (1).b50207bcb5f42a7deee7.mp4',
