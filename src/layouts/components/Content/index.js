@@ -7,11 +7,11 @@ import { faCheckCircle, faMusic } from '@fortawesome/free-solid-svg-icons';
 import Button from '~/components/Button';
 import { HeartIcon, CommentIcon, ShareIcon } from '~/components/Icons';
 import { useRef, useState } from 'react';
-import video from '~/assets/video/tải xuống.mp4';
+import videos from '~/assets/video';
 
 const cx = classNames.bind(Styles);
 
-function VideoInfo() {
+function VideoInfo({ data }) {
   const [playing, setPlaying] = useState(false);
   const videoRef = useRef(null);
 
@@ -24,27 +24,24 @@ function VideoInfo() {
       setPlaying(true);
     }
   };
+  console.log(videos.video2);
   return (
     <div className={cx('wrapper')}>
       <div className={cx('video-info')}>
         <div className={cx('user-info')}>
-          <Link to={'/@vinhss00'}>
-            <Image
-              src="https://files.fullstack.edu.vn/f8-prod/user_photos/214474/62b117e56e1c9.jpg"
-              alt="Vinhss00"
-              className={cx('user-avatar')}
-            />
+          <Link to={`/@${data.userName}`}>
+            <Image src={data.avt} alt={data.userName} className={cx('user-avatar')} />
           </Link>
           <div>
             <Link className={cx('info')} to={'/@vinhss00'}>
               <h4 className={cx('name')}>
-                <span>Vinhss00</span>
+                <span>{data.fullName}</span>
                 <FontAwesomeIcon className={cx('check')} icon={faCheckCircle} />
               </h4>
-              <span className={cx('username')}>Vinhss00</span>
+              <span className={cx('username')}>{data.userName}</span>
             </Link>
             <div className={cx('decription')}>
-              <span className={cx('content-post')}>vinh sô up tiktok nè</span>
+              <span className={cx('content-post')}>{data.content}</span>
               <div>
                 <FontAwesomeIcon icon={faMusic} />
                 <span className={cx('info-song')}>bài hát đang phát</span>
@@ -57,25 +54,25 @@ function VideoInfo() {
         </Button>
       </div>
       <div className={cx('container')}>
-        <video ref={videoRef} onClick={onVideoPress} className={cx('video')} src={video} loop />
+        <video ref={videoRef} onClick={onVideoPress} className={cx('video')} src={data.video_url} loop />
         <div className={cx('action')}>
           <button className={cx('reaction')}>
             <span className={cx('icon')}>
               <HeartIcon />
             </span>
-            <span className={cx('count')}>100k</span>
+            <span className={cx('count')}>{data.like_qty}</span>
           </button>
           <button className={cx('reaction')}>
             <span className={cx('icon')}>
               <CommentIcon />
             </span>
-            <span className={cx('count')}>10k</span>
+            <span className={cx('count')}>{data.cmt_qty}</span>
           </button>
           <button className={cx('reaction')}>
             <span className={cx('icon')}>
               <ShareIcon />
             </span>
-            <span className={cx('count')}>13,4k</span>
+            <span className={cx('count')}>{data.share_qty}</span>
           </button>
         </div>
       </div>
