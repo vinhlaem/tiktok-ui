@@ -11,7 +11,7 @@ function Menu({ children }) {
     <div>
       <nav className={cx('nav-bars-pc')}>{children}</nav>
       <label for="nav-mobile-input">
-        <FontAwesomeIcon for="" className={cx('nav-bars-btn')} icon={faBars} />
+        <FontAwesomeIcon className={cx('nav-bars-btn')} icon={faBars} />
       </label>
       <input type="checkbox" hidden className={cx('nav-input')} id="nav-mobile-input" />
       <label for="nav-mobile-input" className={cx('nav-overlay')}></label>
