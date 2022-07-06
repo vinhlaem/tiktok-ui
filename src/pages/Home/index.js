@@ -13,6 +13,7 @@ const datas = [
     userName: 'Vinhss00',
     content: 'vinh sô up tiktok nè',
     like_qty: 0,
+    liked: 0,
     share_qty: 0,
     cmt_qty: 0,
     video_url: '/static/media/tải xuống.eedd7ebbf637bc295293.mp4',
@@ -24,6 +25,7 @@ const datas = [
     userName: 'minhnguyet123',
     content: 'lên lên lên',
     like_qty: 100,
+    liked: 0,
     share_qty: 0,
     cmt_qty: 0,
     video_url: '/static/media/tải xuống (1).b50207bcb5f42a7deee7.mp4',
@@ -35,6 +37,7 @@ const datas = [
     userName: 'TungKonn00',
     content: 'Tùng kon up tiktok nè',
     like_qty: 0,
+    liked: 0,
     share_qty: 0,
     cmt_qty: 0,
     video_url: '/static/media/tải xuống (2).b4fd7d9a9ef79dc789e1.mp4',
@@ -45,7 +48,8 @@ const datas = [
     avt: 'https://scontent.fdad1-1.fna.fbcdn.net/v/t39.30808-1/262337823_2050654655102914_8530759554740100419_n.jpg?stp=dst-jpg_p200x200&_nc_cat=109&ccb=1-7&_nc_sid=7206a8&_nc_ohc=wLFw4XGQOt8AX9US7ED&_nc_ht=scontent.fdad1-1.fna&oh=00_AT-Obfm-wSY4fAQup1HCmx5RQiUqAs0B8JsI7Shjxr_sBw&oe=62C9DFEF',
     userName: 'nakagi',
     content: 'Zũ óc chó up tiktok nè',
-    like_qty: 0,
+    like_qty: 1,
+    liked: 1,
     share_qty: 0,
     cmt_qty: 0,
     video_url: '/static/media/tải xuống (4).779c27a4fe154bdd04f8.mp4',
@@ -57,6 +61,7 @@ const datas = [
     userName: 'trung',
     content: 'Trung háng rộng up tiktok nè',
     like_qty: 0,
+    liked: 0,
     share_qty: 0,
     cmt_qty: 0,
     video_url: '/static/media/tải xuống (5).77476a7d400efe2dbf74.mp4',
@@ -70,8 +75,8 @@ function Home() {
   }, []);
   return (
     <div ref={contentRef} className={cx('wrapper')}>
-      {datas.map((data) => (
-        <Content key={data.id} data={data} />
+      {datas.map((data, index) => (
+        <Content key={data.id} data={data} index={index} />
       ))}
     </div>
   );
