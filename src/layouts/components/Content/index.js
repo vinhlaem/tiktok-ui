@@ -7,7 +7,6 @@ import { faCheckCircle, faMusic } from '@fortawesome/free-solid-svg-icons';
 import Button from '~/components/Button';
 import { HeartIcon, CommentIcon, ShareIcon, HeartActiveIcon } from '~/components/Icons';
 import { useCallback, useRef, useState } from 'react';
-import videos from '~/assets/video';
 
 const cx = classNames.bind(Styles);
 
@@ -37,7 +36,6 @@ function VideoInfo({ data, index }) {
       // setDataVideo((datavideo.liked = 0));
     }
   }, [datavideo]);
-  console.log(videos.video4, 'aqaa');
 
   const handleShareVideo = () => {
     // const a = {
@@ -46,7 +44,6 @@ function VideoInfo({ data, index }) {
     // };
     setDataVideo({ ...datavideo, share_qty: (datavideo.share_qty += 1) });
   };
-  console.log(datavideo.video_url, 'aaaaa');
   const onVideoPress = () => {
     if (playing) {
       videoRef.current.pause();
@@ -85,7 +82,7 @@ function VideoInfo({ data, index }) {
         </Button>
       </div>
       <div className={cx('container')}>
-        <video ref={videoRef} onClick={onVideoPress} className={cx('video')} src={datavideo?.video_url} loop />
+        <video ref={videoRef} onClick={onVideoPress} className={cx('video')} src={datavideo.video_url} loop />
         <div className={cx('action')}>
           <button onClick={() => handleLikeVideo(index)} className={cx('reaction')}>
             <span className={cx('icon')}>{datavideo.liked === 0 ? <HeartIcon /> : <HeartActiveIcon />}</span>

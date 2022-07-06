@@ -32,8 +32,60 @@
 .active-icon {
   display: none;
 }
-@media screen and (max-width: 400px) {
-  .menu-item {
+
+.nav-bars-btn {
+  width: 28px;
+  height: 28px;
+  display: none;
+  margin-left: 10px;
+}
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+  animation: fadeIn linear 0.3s;
+}
+.nav-bars-mobile {
+  position: fixed;
+  width: 320px;
+  max-width: 100%;
+  background-color: aliceblue;
+  left: 0;
+  height: 100%;
+  transform: translateX(-100%);
+  transition: transform linear 0.3s;
+}
+.nav-bars-mobile-close {
+  font-size: 2.5rem;
+  color: #666;
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+}
+.nav-input:checked ~ .nav-overlay {
+  display: block;
+}
+.nav-input:checked ~ .nav-bars-mobile {
+  transform: translate(0%);
+}
+
+@media screen and (max-width: 1023px) {
+  .nav-bars-pc {
     display: none;
+  }
+  .nav-bars-btn {
+    display: block;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
