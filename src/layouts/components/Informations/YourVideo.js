@@ -6,7 +6,7 @@ const cx = classNames.bind(Styles);
 function YourVideo() {
   return (
     <div className={cx('wrapper-your-video')}>
-      <div className={cx('container-your-video')}>
+      <div>
         <UserIcon className={cx('icon-user')} />
         <p className={cx('text')}>Tải video đầu tiên của bạn lên</p>
         <p className={cx('sub-text')}>Video của bạn sẽ xuất hiện tại đây</p>

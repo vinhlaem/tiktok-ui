@@ -4,7 +4,7 @@ import Image from '~/components/Image';
 import Styles from './Informations.module.scss';
 import YourVideo from './YourVideo';
 import VideoLike from './VideoLike';
-import { EditIcon, ShareOutlineIcon, UserIcon, LockIcon } from '~/components/Icons';
+import { EditIcon, ShareOutlineIcon, LockIcon } from '~/components/Icons';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
@@ -70,26 +70,6 @@ function Informations() {
             <VideoLike />
           </TabPanel>
         </Tabs>
-
-        {/* <div className={cx('tab')}>
-          <p className={cx('tab-title')}>
-            <span>Video</span>
-          </p>
-          <p className={cx('tab-title')}>
-            <LockIcon className={cx('icon')} />
-            <span>Đã thích</span>
-          </p>
-          <div className={cx('bottom-line')}></div>
-        </div> */}
-        {/* <Tabs className={cx('tab-video')}>
-          
-          <TabPanel className={cx('tab-content')}>
-           
-          </TabPanel>
-          <TabPanel className={cx('tab-content')}>
-            <h2>Any content 2</h2>
-          </TabPanel>
-        </Tabs> */}
       </div>
     </div>
   );
