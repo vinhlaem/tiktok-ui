@@ -1,7 +1,9 @@
+import Information from '~/layouts/components/Informations';
+
 function Profile() {
   return (
     <div>
-      <h1>Profile page</h1>
+      <Information />
     </div>
   );
 }
