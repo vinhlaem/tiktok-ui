@@ -34,7 +34,7 @@ function YourVideo() {
   return (
     <div className={cx('wrapper-your-video')}>
       {Videos.length === 0 ? (
-        <div>
+        <div className={cx('container-no-video')}>
           <UserIcon className={cx('icon-user')} />
           <p className={cx('text')}>Tải video đầu tiên của bạn lên</p>
           <p className={cx('sub-text')}>Video của bạn sẽ xuất hiện tại đây</p>
