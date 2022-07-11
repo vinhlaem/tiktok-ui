@@ -72,5 +72,13 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
+  .inner {
+    height: 100%;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--default-layout-horizontal-spacer);
+  }
 }

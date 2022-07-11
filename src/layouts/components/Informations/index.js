@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import classNames from 'classnames/bind';
 import Button from '~/components/Button';
 import Image from '~/components/Image';
+import Modal from './Modal';
 import Styles from './Informations.module.scss';
 import YourVideo from './YourVideo';
 import VideoLike from './VideoLike';
@@ -11,6 +13,7 @@ import 'react-tabs/style/react-tabs.css';
 const cx = classNames.bind(Styles);
 
 function Informations() {
+  const [modalOpen, setModalOpen] = useState(false);
   return (
     <div className={cx('wrapper')}>
       <div className={cx('content-infomation')}>
@@ -27,7 +30,14 @@ function Informations() {
               <h2 className={cx('user-name')}>Vinhss00</h2>
               <h1 className={cx('name')}>Vinh Trương</h1>
               <div className={cx('continer-btn')}>
-                <Button leftIcon={<EditIcon />} className={cx('btn')} outline>
+                <Button
+                  leftIcon={<EditIcon />}
+                  onClick={() => {
+                    setModalOpen(true);
+                  }}
+                  className={cx('btn')}
+                  outline
+                >
                   Sửa hồ sơ
                 </Button>
               </div>
@@ -71,6 +81,7 @@ function Informations() {
           </TabPanel>
         </Tabs>
       </div>
+      {modalOpen && <Modal setOpenModal={setModalOpen} />}
     </div>
   );
 }

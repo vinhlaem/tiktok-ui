@@ -152,7 +152,9 @@
   object-fit: fill;
   border-radius: 10px;
   width: 30%;
+  top: 1;
 }
+
 @media screen and (max-width: 1023px) {
   .information {
     position: relative;
@@ -261,11 +263,16 @@
     display: flex;
     height: 542px;
     width: 60%;
+    position: none;
+  }
+  .video-list {
+    background-color: black;
+    height: 100px;
   }
   .video-item {
     margin: 10px;
     object-fit: fill;
     border-radius: 10px;
-    width: 40%;
+    width: 50%;
   }
 }
