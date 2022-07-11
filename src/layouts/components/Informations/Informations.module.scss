@@ -110,7 +110,9 @@
   justify-content: center;
   background: none;
 }
-
+.icon {
+  margin-right: 5px;
+}
 .wrapper-your-video {
   height: 542px;
   display: flex;
@@ -135,4 +137,131 @@
   font-weight: 400;
   color: rgba(22, 24, 35, 0.75);
   margin-top: 8px;
+}
+.wrapper-video-like {
+  display: flex;
+  height: 542px;
+  width: 70%;
+}
+.video-item {
+  margin: 10px;
+  object-fit: fill;
+  border-radius: 10px;
+  width: 30%;
+}
+@media screen and (max-width: 1023px) {
+  .information {
+    position: relative;
+    flex: 0 0 auto;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    max-width: 400px;
+  }
+  .user-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+  }
+  .user-name {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    padding-bottom: 4px;
+  }
+
+  .name {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+    margin-left: 5px;
+  }
+  .continer-btn {
+    width: 140px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    margin-top: 16px;
+  }
+  .btn {
+    border-color: rgba(22, 24, 35, 0.12);
+    color: black;
+    font-size: 15px;
+    border-width: 1px;
+    background-color: rgba(255, 255, 255, 1);
+    height: 100%;
+    width: 100%;
+  }
+  .count {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+    margin-right: 15px;
+    align-items: baseline;
+  }
+  .span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    display: inline-block;
+    margin-left: 4px;
+  }
+  .user-bio {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgba(18, 18, 18, 1);
+    white-space: pre-line;
+    margin-top: 5px;
+  }
+  .container-video-tab {
+    height: 542px;
+    width: 500px;
+  }
+  .tab-list {
+    width: 300px;
+    height: 44px;
+    display: flex;
+    list-style: none;
+    text-align: center;
+  }
+  .tab {
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.337);
+    width: 50%;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    background: none;
+  }
+  .icon-user {
+    width: 60px;
+    height: 60px;
+    color: rgba(0, 0, 0, 0.221);
+  }
+  .text {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 700;
+    color: rgba(22, 24, 35, 1);
+    margin-top: 10px;
+  }
+  .sub-text {
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 400;
+    color: rgba(22, 24, 35, 0.75);
+    margin-top: 4px;
+  }
+  .wrapper-video-like {
+    display: flex;
+    height: 542px;
+    width: 60%;
+  }
+  .video-item {
+    margin: 10px;
+    object-fit: fill;
+    border-radius: 10px;
+    width: 40%;
+  }
 }

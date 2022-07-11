@@ -7,7 +7,6 @@ import { faCheckCircle, faMusic } from '@fortawesome/free-solid-svg-icons';
 import Button from '~/components/Button';
 import { HeartIcon, CommentIcon, ShareIcon, HeartActiveIcon } from '~/components/Icons';
 import { useCallback, useRef, useState } from 'react';
-import videos from '~/assets/video';
 
 const cx = classNames.bind(Styles);
 
@@ -47,6 +46,7 @@ function VideoInfo({ data, index }) {
   };
   const onVideoPress = () => {
     if (playing) {
+      console.log(videoRef);
       videoRef.current.pause();
       setPlaying(false);
     } else {
