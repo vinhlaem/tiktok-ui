@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind';
-import Styles from './Informations.module.scss';
+import Styles from '../Informations.module.scss';
 
 import Masonry from 'react-masonry-component';
 

@@ -2,10 +2,10 @@ import { useState } from 'react';
 import classNames from 'classnames/bind';
 import Button from '~/components/Button';
 import Image from '~/components/Image';
-import Modal from './Modal';
+import Modal from './components/Modal';
 import Styles from './Informations.module.scss';
-import YourVideo from './YourVideo';
-import VideoLike from './VideoLike';
+import YourVideo from './components/YourVideo';
+import VideoLike from './components/VideoLike';
 import { EditIcon, ShareOutlineIcon, LockIcon } from '~/components/Icons';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
@@ -14,6 +14,9 @@ const cx = classNames.bind(Styles);
 
 function Informations() {
   const [modalOpen, setModalOpen] = useState(false);
+  const [name, setName] = useState('Vinh Trương');
+  const [biouser, setBioUser] = useState('Chưa có tiểu sử');
+  const [username, setUserName] = useState('Vinhsooo');
   return (
     <div className={cx('wrapper')}>
       <div className={cx('content-infomation')}>
@@ -27,8 +30,8 @@ function Informations() {
               />
             </div>
             <div className={cx('container-name')}>
-              <h2 className={cx('user-name')}>Vinhss00</h2>
-              <h1 className={cx('name')}>Vinh Trương</h1>
+              <h2 className={cx('user-name')}>{username}</h2>
+              <h1 className={cx('name')}>{name}</h1>
               <div className={cx('continer-btn')}>
                 <Button
                   leftIcon={<EditIcon />}
@@ -57,7 +60,7 @@ function Informations() {
               <span className={cx('span')}>Thích</span>
             </div>
           </h2>
-          <h2 className={cx('user-bio')}>Chưa có tiểu sử</h2>
+          <h2 className={cx('user-bio')}>{biouser}</h2>
           <div className={cx('share')}>
             <ShareOutlineIcon />
           </div>
@@ -72,7 +75,6 @@ function Informations() {
               Đã thích
             </Tab>
           </TabList>
-
           <TabPanel>
             <YourVideo />
           </TabPanel>
@@ -81,7 +83,9 @@ function Informations() {
           </TabPanel>
         </Tabs>
       </div>
-      {modalOpen && <Modal setOpenModal={setModalOpen} />}
+      {modalOpen && (
+        <Modal setOpenModal={setModalOpen} setUserBio={setBioUser} setUserName={setUserName} setname={setName} />
+      )}
     </div>
   );
 }
