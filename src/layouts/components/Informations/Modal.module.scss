@@ -168,7 +168,7 @@
 }
 .check-name-icon {
   left: 328px;
-  margin-left: 15px;
+
   position: absolute;
   top: 11px;
 }
@@ -445,5 +445,11 @@
     max-width: 460px;
     overflow: hidden;
     margin-left: -11px;
+  }
+  .check-name-icon {
+    left: 328px;
+    margin-left: 15px;
+    position: absolute;
+    top: 11px;
   }
 }
