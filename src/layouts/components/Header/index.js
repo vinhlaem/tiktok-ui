@@ -95,7 +95,7 @@ function Header() {
         <Search />
         <div className={cx('actions')}>
           {currentUser ? (
-            <>
+            <div className={cx('container-action-btn')}>
               <Tippy delay={[0, 50]} content="Upload video" placement="bottom">
                 <button className={cx('action-btn')}>
                   <UploadIcon />
@@ -112,7 +112,7 @@ function Header() {
                   <span className={cx('badge')}>12</span>
                 </button>
               </Tippy>
-            </>
+            </div>
           ) : (
             <>
               <Button text>Upload</Button>

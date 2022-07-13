@@ -66,24 +66,33 @@ function VideoInfo({ data, index }) {
   const [datavideo, setDataVideo] = useState(data);
 
   const handleLikeVideo = useCallback(() => {
-    if (datavideo.liked === 0) {
-      const a = {
-        ...datavideo,
-        like_qty: (datavideo.like_qty += 1),
-        liked: 1,
-      };
-      setDataVideo(a);
-      // setDataVideo((datavideo.liked = 1));
-    } else {
-      const a = {
-        ...datavideo,
-        like_qty: (datavideo.like_qty -= 1),
-        liked: 0,
-      };
-      setDataVideo(a);
-      // setDataVideo((datavideo.like_qty -= 1));
-      // setDataVideo((datavideo.liked = 0));
-    }
+    const isIndex = datavideo.liked === 0;
+    const qty = isIndex ? (datavideo.like_qty += 1) : (datavideo.like_qty -= 1);
+    const liked = isIndex ? 1 : 0;
+    // if (datavideo.liked === 0) {
+    //   const a = {
+    //     ...datavideo,
+    //     like_qty: (datavideo.like_qty += 1),
+    //     liked: 1,
+    //   };
+    //   setDataVideo(a);
+    //   // setDataVideo((datavideo.liked = 1));
+    // } else {
+    //   const a = {
+    //     ...datavideo,
+    //     like_qty: (datavideo.like_qty -= 1),
+    //     liked: 0,
+    //   };
+    //   setDataVideo(a);
+    //   // setDataVideo((datavideo.like_qty -= 1));
+    //   // setDataVideo((datavideo.liked = 0));
+    // }
+    const newData = {
+      ...datavideo,
+      like_qty: qty,
+      liked: liked,
+    };
+    setDataVideo(newData);
   }, [datavideo]);
 
   const onVideoPress = () => {

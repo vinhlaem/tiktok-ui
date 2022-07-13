@@ -22,6 +22,9 @@
   justify-content: space-between;
   padding: 0 var(--default-layout-horizontal-spacer);
 }
+.container-action-btn {
+  display: flex;
+}
 .logo-link {
   display: flex;
 }
@@ -80,5 +83,19 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 var(--default-layout-horizontal-spacer);
+  }
+  .container-action-btn {
+    display: block;
+    position: fixed;
+    left: 0;
+    bottom: 5px;
+  }
+  .action-btn {
+    display: flex;
+    font-size: 2.2rem;
+    color: #161623;
+    background-color: transparent;
+    padding: 4px 10px;
+    cursor: pointer;
   }
 }

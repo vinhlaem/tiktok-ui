@@ -73,7 +73,7 @@ const datas = [
     video_url: `${videos.video5}`,
   },
 ];
-
+// move to contanins
 function Home() {
   const contentRef = useRef();
   useEffect(() => {
