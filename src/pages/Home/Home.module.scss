@@ -1,12 +1,1 @@
-.wrapper {
-  width: 780px;
-  overflow-y: auto;
-  scroll-snap-type: y mandatory;
-}
-@media screen and (max-width: 500px) {
-  .wrapper {
-    width: 400px;
-    overflow-y: auto;
-    scroll-snap-type: y mandatory;
-  }
-}
+
