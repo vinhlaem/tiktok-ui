@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import Content from '~/layouts/components/Content';
 import classNames from 'classnames/bind';
 import Styles from './Home.module.scss';
+import videos from '~/assets/video';
 
 const cx = classNames.bind(Styles);
 
@@ -17,7 +18,7 @@ const datas = [
     share_qty: 0,
     cmt_qty: 0,
     following: false,
-    video_url: '/static/media/tải xuống.eedd7ebbf637bc295293.mp4',
+    video_url: `${videos.video1}`,
   },
   {
     id: 2,
@@ -30,7 +31,7 @@ const datas = [
     share_qty: 0,
     cmt_qty: 0,
     following: false,
-    video_url: '/static/media/tải xuống (1).b50207bcb5f42a7deee7.mp4',
+    video_url: `${videos.video2}`,
   },
   {
     id: 3,
@@ -43,7 +44,7 @@ const datas = [
     share_qty: 0,
     cmt_qty: 0,
     following: false,
-    video_url: '/static/media/tải xuống (2).b4fd7d9a9ef79dc789e1.mp4',
+    video_url: `${videos.video3}`,
   },
   {
     id: 4,
@@ -56,7 +57,7 @@ const datas = [
     share_qty: 0,
     cmt_qty: 0,
     following: false,
-    video_url: '/static/media/tải xuống (4).779c27a4fe154bdd04f8.mp4',
+    video_url: `${videos.video4}`,
   },
   {
     id: 5,
@@ -69,7 +70,7 @@ const datas = [
     share_qty: 0,
     cmt_qty: 0,
     following: true,
-    video_url: '/static/media/tải xuống (5).77476a7d400efe2dbf74.mp4',
+    video_url: `${videos.video5}`,
   },
 ];
 

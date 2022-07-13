@@ -79,8 +79,5 @@ function Following() {
     </div>
   );
 }
-setTimeout(() => {
-  debugger;
-}, 2000);
 
 export default Following;
