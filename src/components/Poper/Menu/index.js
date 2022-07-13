@@ -11,7 +11,7 @@ const cx = classNames.bind(styles);
 
 const defaultFn = () => {};
 
-function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn, ...passprops }) {
+function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn, placement, ...passprops }) {
   const [history, setHistory] = useState([{ data: items }]);
   const current = history[history.length - 1];
   const renderItems = () => {
@@ -49,6 +49,7 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn,
   const handleResetMenu = () => {
     setHistory((prev) => prev.slice(0, 1));
   };
+
   return (
     <Tippy
       delay={[0, 700]}
@@ -56,7 +57,7 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn,
       offset={[12, 8]}
       interactive
       hideOnClick={hideOnClick}
-      placement="bottom-end"
+      placement="bottom"
       render={renderResult}
     >
       {children}

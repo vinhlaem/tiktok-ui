@@ -1,0 +1,107 @@
+.wrapper-card {
+  top: -10px;
+  left: -5px;
+  z-index: 100;
+  position: absolute;
+}
+.padding-top {
+  height: 40px;
+  cursor: pointer;
+}
+.container-card-information {
+  position: relative;
+  width: 320px;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 16px;
+  padding: 20px;
+  background: rgb(255, 255, 255);
+  border-radius: 8px;
+}
+.container-header {
+  display: flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.user-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.btn {
+  color: rgb(22, 24, 35);
+  background-color: rgb(255, 255, 255);
+  min-width: 106px;
+  min-height: 28px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+  font-family: ProximaNova, PingFangSC, sans-serif;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  user-select: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  border-color: rgba(22, 24, 35, 0.12);
+  padding: 6px 8px;
+}
+.user-title {
+  color: rgba(22, 24, 35, 1);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+.user-card-nickname {
+  color: rgba(22, 24, 35, 1);
+  font-family: 'gstatic';
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+}
+.user-stat {
+  margin-top: 8px;
+}
+.user-stat-text {
+  font-weight: 700;
+  margin-right: 6px;
+  font-size: 17px;
+  line-height: 20px;
+  display: inline-block;
+}
+.user-stat-follower {
+  color: rgba(22, 24, 35, 0.75);
+  font-size: 17px;
+  line-height: 20px;
+  display: inline-block;
+}
+.user-stat-like-count {
+  font-weight: 700;
+  margin-right: 6px;
+  font-size: 17px;
+  line-height: 20px;
+  display: inline-block;
+  margin-left: 10px;
+}
+.user-stat-like {
+  color: rgba(22, 24, 35, 0.75);
+  font-size: 17px;
+  line-height: 20px;
+  display: inline-block;
+}
+.user-bio {
+  font-size: 14px;
+  line-height: 20px;
+  padding-top: 16px;
+  margin-top: 16px;
+  border-top: 1px solid rgba(22, 24, 35, 0.12);
+}

@@ -54,6 +54,11 @@
   min-width: 88px;
   height: 40px;
 }
+.follow {
+  border: 1px solid black;
+  min-width: 88px;
+  height: 40px;
+}
 .info-song {
   margin-left: 10px;
 }
@@ -113,6 +118,11 @@
   text-align: center;
   margin-bottom: 5px;
   margin-top: 5px;
+}
+
+.menu {
+  background-color: black;
+  margin-left: 100px;
 }
 @media screen and (max-width: 46.1875em) {
   .wrapper {
@@ -189,6 +199,7 @@
     width: 50px;
     height: 35px;
   }
+
   .reaction {
     display: flex;
     align-items: center;

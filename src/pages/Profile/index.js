@@ -1,11 +1,7 @@
 import Information from '~/layouts/components/Informations';
 
 function Profile() {
-  return (
-    <div>
-      <Information />
-    </div>
-  );
+  return <Information />;
 }
 
 export default Profile;

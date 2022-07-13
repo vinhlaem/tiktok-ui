@@ -10,13 +10,13 @@ function Menu({ children }) {
   return (
     <div>
       <nav className={cx('nav-bars-pc')}>{children}</nav>
-      <label for="nav-mobile-input">
+      <label htmlFor="nav-mobile-input">
         <FontAwesomeIcon className={cx('nav-bars-btn')} icon={faBars} />
       </label>
       <input type="checkbox" hidden className={cx('nav-input')} id="nav-mobile-input" />
-      <label for="nav-mobile-input" className={cx('nav-overlay')}></label>
+      <label htmlFor="nav-mobile-input" className={cx('nav-overlay')}></label>
       <nav className={cx('nav-bars-mobile')}>
-        <label for="nav-mobile-input" className={cx('nav-bars-mobile-close')}>
+        <label htmlFor="nav-mobile-input" className={cx('nav-bars-mobile-close')}>
           <FontAwesomeIcon icon={faXmark} />
         </label>
         {children}

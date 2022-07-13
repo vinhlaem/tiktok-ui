@@ -2,7 +2,6 @@ import classNames from 'classnames/bind';
 import Styles from './Modal.module.scss';
 import Image from '~/components/Image';
 import { CheckIcon, EditIcon } from '~/components/Icons';
-import ImageUploading from 'react-images-uploading';
 
 import { useState } from 'react';
 const cx = classNames.bind(Styles);

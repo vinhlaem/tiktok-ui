@@ -58,7 +58,7 @@ const userMenu = [
   {
     icon: <FontAwesomeIcon icon={faUser} />,
     title: 'View profile',
-    to: '/vinhss0',
+    to: '/@vinhsooo',
   },
   {
     icon: <FontAwesomeIcon icon={faCoins} />,

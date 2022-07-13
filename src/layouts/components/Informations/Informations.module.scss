@@ -157,7 +157,7 @@
 
 @media screen and (max-width: 1023px) {
   .information {
-    position: relative;
+    position: inherit;
     flex: 0 0 auto;
     margin-bottom: 20px;
     box-sizing: border-box;
@@ -266,8 +266,7 @@
     position: none;
   }
   .video-list {
-    background-color: black;
-    height: 100px;
+    position: inherit !important;
   }
   .video-item {
     margin: 10px;

@@ -5,11 +5,59 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle, faMusic } from '@fortawesome/free-solid-svg-icons';
 import Button from '~/components/Button';
-import { HeartIcon, CommentIcon, ShareIcon, HeartActiveIcon } from '~/components/Icons';
+import {
+  HeartIcon,
+  CommentIcon,
+  ShareIcon,
+  HeartActiveIcon,
+  EmbedIcon,
+  ShareLinkIcon,
+  FacebookIcon,
+  WhatsAppIcon,
+  CopyLinkIcon,
+  ShareArrowIcon,
+} from '~/components/Icons';
 import { useCallback, useRef, useState } from 'react';
+
 import videos from '~/assets/video';
+import Menu from '~/components/Poper/Menu';
+import CardProfile from '~/components/Poper/CardProfile';
 
 const cx = classNames.bind(Styles);
+
+const userMenu = [
+  {
+    icon: <EmbedIcon />,
+    title: 'Nhúng',
+    to: '/@vinhsooo',
+  },
+  {
+    icon: <ShareLinkIcon />,
+    title: 'Gửi đến bạn bè',
+    to: '/coin',
+  },
+  {
+    icon: <FacebookIcon />,
+    title: 'Chia sẻ với Facebook',
+    to: '/settings',
+  },
+  {
+    icon: <WhatsAppIcon />,
+    title: 'Chia sẻ với Whatsapp',
+    to: '/log out',
+  },
+  {
+    icon: <CopyLinkIcon />,
+    title: 'Sao chép liên kết',
+    to: '/log out',
+  },
+  {
+    icon: <ShareArrowIcon />,
+    title: '',
+    href: '#',
+    center: true,
+  },
+];
 
 function VideoInfo({ data, index }) {
   const [playing, setPlaying] = useState(false);
@@ -38,13 +86,6 @@ function VideoInfo({ data, index }) {
     }
   }, [datavideo]);
 
-  const handleShareVideo = () => {
-    // const a = {
-    //   ...datavideo,
-    //   share_qty: (datavideo.share_qty += 1),
-    // };
-    setDataVideo({ ...datavideo, share_qty: (datavideo.share_qty += 1) });
-  };
   const onVideoPress = () => {
     if (playing) {
       console.log(videoRef);
@@ -59,9 +100,11 @@ function VideoInfo({ data, index }) {
     <div className={cx('wrapper')}>
       <div className={cx('video-info')}>
         <div className={cx('user-info')}>
-          <Link to={`/@${datavideo.userName}`}>
-            <Image src={datavideo.avt} alt={datavideo.userName} className={cx('user-avatar')} />
-          </Link>
+          <CardProfile>
+            <Link to={`/@${datavideo.userName}`}>
+              <Image src={datavideo.avt} alt={datavideo.userName} className={cx('user-avatar')} />
+            </Link>
+          </CardProfile>
           <div>
             <Link className={cx('info')} to={'/@vinhss00'}>
               <h4 className={cx('name')}>
@@ -79,9 +122,13 @@ function VideoInfo({ data, index }) {
             </div>
           </div>
         </div>
-        <Button className={cx('btn')} outline>
-          Following
-        </Button>
+        {!datavideo.following ? (
+          <Button className={cx('btn')} outline>
+            Following
+          </Button>
+        ) : (
+          <Button className={cx('follow')}>Đang Follow</Button>
+        )}
       </div>
       <div className={cx('container')}>
         <video ref={videoRef} onClick={onVideoPress} className={cx('video')} src={datavideo.video_url} loop />
@@ -96,10 +143,15 @@ function VideoInfo({ data, index }) {
             </span>
             <span className={cx('count')}>{datavideo.cmt_qty}</span>
           </button>
-          <button onClick={() => handleShareVideo(index)} className={cx('reaction')}>
-            <span className={cx('icon')}>
-              <ShareIcon />
-            </span>
+
+          <button className={cx('reaction')}>
+            <div>
+              <Menu items={userMenu} className={cx('menu')}>
+                <span className={cx('icon')}>
+                  <ShareIcon />
+                </span>
+              </Menu>
+            </div>
             <span className={cx('count')}>{datavideo.share_qty}</span>
           </button>
         </div>

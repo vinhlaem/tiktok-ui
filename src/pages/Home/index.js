@@ -16,6 +16,7 @@ const datas = [
     liked: 0,
     share_qty: 0,
     cmt_qty: 0,
+    following: false,
     video_url: '/static/media/tải xuống.eedd7ebbf637bc295293.mp4',
   },
   {
@@ -28,6 +29,7 @@ const datas = [
     liked: 0,
     share_qty: 0,
     cmt_qty: 0,
+    following: false,
     video_url: '/static/media/tải xuống (1).b50207bcb5f42a7deee7.mp4',
   },
   {
@@ -40,6 +42,7 @@ const datas = [
     liked: 0,
     share_qty: 0,
     cmt_qty: 0,
+    following: false,
     video_url: '/static/media/tải xuống (2).b4fd7d9a9ef79dc789e1.mp4',
   },
   {
@@ -52,6 +55,7 @@ const datas = [
     liked: 1,
     share_qty: 0,
     cmt_qty: 0,
+    following: false,
     video_url: '/static/media/tải xuống (4).779c27a4fe154bdd04f8.mp4',
   },
   {
@@ -64,6 +68,7 @@ const datas = [
     liked: 0,
     share_qty: 0,
     cmt_qty: 0,
+    following: true,
     video_url: '/static/media/tải xuống (5).77476a7d400efe2dbf74.mp4',
   },
 ];
