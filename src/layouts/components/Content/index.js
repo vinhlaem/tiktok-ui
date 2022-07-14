@@ -145,7 +145,14 @@ function VideoInfo({ data, index }) {
         </span>
       </div>
       <div className={cx('container')}>
-        <video ref={videoRef} onClick={onVideoPress} className={cx('video')} src={datavideo.video_url} loop />
+        <video
+          playsInline
+          ref={videoRef}
+          onClick={onVideoPress}
+          className={cx('video')}
+          src={datavideo.video_url}
+          loop
+        />
         <div className={cx('action')}>
           <button onClick={() => handleLikeVideo(index)} className={cx('reaction')}>
             <span className={cx('icon')}>{datavideo.liked === 0 ? <HeartIcon /> : <HeartActiveIcon />}</span>
