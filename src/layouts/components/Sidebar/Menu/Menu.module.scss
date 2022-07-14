@@ -55,9 +55,11 @@
   max-width: 100%;
   background-color: aliceblue;
   left: 0;
+  top: 60px;
   height: 100%;
   transform: translateX(-100%);
   transition: transform linear 0.3s;
+  z-index: 1000;
 }
 .nav-bars-mobile-close {
   font-size: 2.5rem;

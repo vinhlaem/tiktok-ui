@@ -124,13 +124,10 @@ function VideoInfo({ data, index }) {
             </Link>
             <div className={cx('decription')}>
               <span className={cx('content-post')}>{datavideo.content}</span>
-              <div className={cx('info-song')}>
-                <FontAwesomeIcon icon={faMusic} />
-                <span className={cx('name-song')}>bài hát đang phát</span>
-              </div>
             </div>
           </div>
         </div>
+
         {!datavideo.following ? (
           <Button className={cx('btn')} outline>
             Following
@@ -138,6 +135,14 @@ function VideoInfo({ data, index }) {
         ) : (
           <Button className={cx('follow')}>Đang Follow</Button>
         )}
+      </div>
+      <div className={cx('info-song')}>
+        <span className={cx('name-song')}>
+          <FontAwesomeIcon className={cx('icon-song')} icon={faMusic} />
+          <span>
+            bài hát đang phát của <b>{datavideo.fullName}</b>
+          </span>
+        </span>
       </div>
       <div className={cx('container')}>
         <video ref={videoRef} onClick={onVideoPress} className={cx('video')} src={datavideo.video_url} loop />

@@ -22,28 +22,33 @@ function Informations() {
       <div className={cx('content-infomation')}>
         <div className={cx('information')}>
           <div className={cx('container-info')}>
-            <div className={cx('container-avt')}>
-              <Image
-                src="https://scontent.fdad2-1.fna.fbcdn.net/v/t39.30808-6/270082060_1294703671002480_6063407352322219179_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=o25jNg-n1S4AX94vfAr&_nc_ht=scontent.fdad2-1.fna&oh=00_AT-SYkIbjyZQ28L1A_ibRHdVrzRslXIIdqv-4q1Vq3y7bQ&oe=62CB83E9"
-                alt="vinhssooo"
-                className={cx('user-avatar')}
-              />
-            </div>
-            <div className={cx('container-name')}>
-              <h2 className={cx('user-name')}>{username}</h2>
-              <h1 className={cx('name')}>{name}</h1>
-              <div className={cx('continer-btn')}>
-                <Button
-                  leftIcon={<EditIcon />}
-                  onClick={() => {
-                    setModalOpen(true);
-                  }}
-                  className={cx('btn')}
-                  outline
-                >
-                  Sửa hồ sơ
-                </Button>
+            <div className={cx('container-avt-name')}>
+              <div className={cx('container-avt')}>
+                <Image
+                  src="https://scontent.fdad2-1.fna.fbcdn.net/v/t39.30808-6/270082060_1294703671002480_6063407352322219179_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=o25jNg-n1S4AX94vfAr&_nc_ht=scontent.fdad2-1.fna&oh=00_AT-SYkIbjyZQ28L1A_ibRHdVrzRslXIIdqv-4q1Vq3y7bQ&oe=62CB83E9"
+                  alt="vinhssooo"
+                  className={cx('user-avatar')}
+                />
               </div>
+              <div className={cx('container-name')}>
+                <h2 className={cx('user-name')}>{username}</h2>
+                <h1 className={cx('name')}>{name}</h1>
+                <div className={cx('continer-btn')}>
+                  <Button
+                    leftIcon={<EditIcon className={cx('icon-btn')} />}
+                    onClick={() => {
+                      setModalOpen(true);
+                    }}
+                    className={cx('btn')}
+                    outline
+                  >
+                    Sửa hồ sơ
+                  </Button>
+                </div>
+              </div>
+            </div>
+            <div className={cx('share')}>
+              <ShareOutlineIcon />
             </div>
           </div>
           <h2 className={cx('count-info')}>
@@ -61,9 +66,6 @@ function Informations() {
             </div>
           </h2>
           <h2 className={cx('user-bio')}>{biouser}</h2>
-          <div className={cx('share')}>
-            <ShareOutlineIcon />
-          </div>
         </div>
       </div>
       <div className={cx('container-video-tab')}>

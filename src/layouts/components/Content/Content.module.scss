@@ -51,7 +51,7 @@
 }
 
 .btn {
-  min-width: 88px;
+  width: 88px;
   height: 40px;
 }
 .follow {
@@ -60,10 +60,27 @@
   height: 40px;
 }
 .info-song {
+  width: 100%;
   margin-left: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.icon-song {
+  margin-right: 5px;
 }
 .name-song {
-  margin-left: 10px;
+  display: inline-block;
+  margin-left: 70px;
+  animation: marquee 3s linear infinite;
+}
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
 }
 //Tablet
 
@@ -127,7 +144,7 @@
 @media screen and (max-width: 46.1875em) {
   .wrapper {
     padding: 20px 0;
-    width: 275px;
+    width: 290px;
     max-width: 592px;
     margin: 0px;
   }
@@ -153,6 +170,7 @@
     margin-left: 7px;
   }
   .check {
+    margin-right: 5px;
     color: rgb(32, 213, 236);
   }
 
@@ -168,11 +186,11 @@
   }
   .content-post {
     margin-left: -5px;
-    max-width: 100%;
+    width: 100%;
     font-size: 16px;
   }
   .info-song {
-    margin-left: -8px;
+    margin-left: 10px;
   }
   .name-song {
     margin-left: 10px;
@@ -180,7 +198,7 @@
   .container {
     display: flex;
     align-items: flex-end;
-    padding: 10px;
+    padding: 5px;
     border-bottom: 1px solid gray;
     width: 100%;
     height: 100%;
@@ -190,20 +208,24 @@
     display: block;
     margin-left: 0px;
     border-radius: 10px;
-    margin-top: 5px;
+    margin-top: 0px;
     object-fit: fill;
     width: 80%;
     height: 100%;
   }
   .btn {
-    width: 50px;
+    width: 105px !important;
     height: 35px;
+
+    font-size: 14px;
+    padding: 0px;
   }
   .follow {
     border: 1px solid black;
-    min-width: 115px;
+    width: 50px;
     height: 35px;
     font-size: 14px;
+    padding: 0px;
   }
 
   .reaction {

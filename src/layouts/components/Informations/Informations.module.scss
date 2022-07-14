@@ -8,7 +8,6 @@
   flex-direction: column;
 }
 .information {
-  position: relative;
   flex: 0 0 auto;
   margin-bottom: 20px;
   box-sizing: border-box;
@@ -16,6 +15,10 @@
   padding-right: 92px;
 }
 .container-info {
+  display: flex;
+  justify-content: space-between;
+}
+.container-avt-name {
   display: flex;
 }
 .user-avatar {
@@ -83,10 +86,7 @@
   margin-top: 10px;
 }
 .share {
-  position: absolute;
-  top: 11px;
   cursor: pointer;
-  right: 52px;
 }
 .container-video-tab {
   height: 542px;
@@ -155,47 +155,66 @@
   top: 1;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 500px) {
+  .wrapper {
+    margin: 15px 18px;
+  }
+  .content-information {
+    // flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+  }
   .information {
     position: inherit;
     flex: 0 0 auto;
     margin-bottom: 20px;
     box-sizing: border-box;
-    max-width: 400px;
+    width: 100%;
+    padding-right: 0;
   }
   .user-avatar {
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
   }
   .user-name {
     font-weight: 700;
-    font-size: 28px;
-    line-height: 38px;
-    padding-bottom: 4px;
+    font-size: 20px;
+    padding-bottom: 0px;
+    line-height: normal;
   }
-
   .name {
     font-weight: 600;
-    font-size: 15px;
-    line-height: 25px;
-    margin-left: 5px;
+    font-size: 13px;
+    line-height: normal;
+    margin-left: 2px;
+    color: rgba(22, 21, 21, 0.816);
   }
   .continer-btn {
-    width: 140px;
-    height: 40px;
+    width: 115px;
+    height: 30px;
     padding: 0;
     margin: 0;
-    margin-top: 16px;
+    margin-top: 5px;
   }
   .btn {
     border-color: rgba(22, 24, 35, 0.12);
     color: black;
-    font-size: 15px;
+    font-size: 12px;
     border-width: 1px;
     background-color: rgba(255, 255, 255, 1);
     height: 100%;
     width: 100%;
+    text-align: center;
+    padding: 0px 0px;
+  }
+  .icon-btn {
+    width: 20px;
+    height: 20px;
+  }
+  .count-info {
+    display: flex;
+    margin-top: 10px;
   }
   .count {
     font-weight: 600;
@@ -221,7 +240,7 @@
   }
   .container-video-tab {
     height: 542px;
-    width: 500px;
+    width: 300px;
   }
   .tab-list {
     width: 300px;
@@ -262,7 +281,7 @@
   .wrapper-video-like {
     display: flex;
     height: 542px;
-    width: 60%;
+    width: 100%;
     position: none;
   }
   .video-list {
