@@ -244,4 +244,12 @@
     width: 35px;
     height: 35px;
   }
+  @media screen and (max-width: 360px) {
+    .wrapper {
+      padding: 25px 0;
+      width: 290px;
+      max-width: 592px;
+      margin-left: 12px;
+    }
+  }
 }
