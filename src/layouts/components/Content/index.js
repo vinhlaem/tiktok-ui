@@ -109,11 +109,13 @@ function VideoInfo({ data, index }) {
     <div className={cx('wrapper')}>
       <div className={cx('video-info')}>
         <div className={cx('user-info')}>
-          <CardProfile>
-            <Link to={`/@${datavideo.userName}`}>
-              <Image src={datavideo.avt} alt={datavideo.userName} className={cx('user-avatar')} />
-            </Link>
-          </CardProfile>
+          <div>
+            <CardProfile>
+              <Link to={`/@${datavideo.userName}`}>
+                <Image src={datavideo.avt} alt={datavideo.userName} className={cx('user-avatar')} />
+              </Link>
+            </CardProfile>
+          </div>
           <div>
             <Link className={cx('info')} to={'/@vinhss00'}>
               <h4 className={cx('name')}>

@@ -1,6 +1,7 @@
 import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Tippy from '@tippyjs/react';
 import config from '~/config';
@@ -22,6 +23,7 @@ import 'tippy.js/dist/tippy.css';
 import { InboxIcon, MessageIcon, UploadIcon } from '~/components/Icons';
 import Image from '~/components/Image';
 import Search from '~/layouts/components/Search';
+import LoginModal from '~/components/Popup/LoginModal';
 
 const cx = classNames.bind(styles);
 
@@ -74,17 +76,23 @@ const userMenu = [
   {
     icon: <FontAwesomeIcon icon={faSignOut} />,
     title: 'Log out',
-    to: '/log out',
+    //to: '/log out',
     separate: true,
   },
 ];
 
-const handleMenuChange = (menuItem) => {
-  console.log(menuItem);
-};
-
 function Header() {
-  const currentUser = true;
+  const [loginmodalOpen, setLoginModalOpen] = useState(false);
+  const [currentUser, setCurrentUser] = useState(true);
+  const handleMenuChange = (menuItem) => {
+    console.log(menuItem);
+  };
+
+  const handleLogout = () => {
+    if (userMenu.title === 'Logout') {
+      setCurrentUser(false);
+    }
+  };
 
   return (
     <header className={cx('wrapper')}>
@@ -114,12 +122,28 @@ function Header() {
               </Tippy>
             </div>
           ) : (
-            <>
-              <Button text>Upload</Button>
-              <Button primary>Log in</Button>
-            </>
+            <div className={cx('container-btn-user')}>
+              <Button
+                className={cx('btn-login')}
+                onClick={() => {
+                  if (!currentUser) return setLoginModalOpen(true);
+                }}
+                text
+              >
+                Upload
+              </Button>
+              <Button
+                className={cx('btn-register')}
+                onClick={() => {
+                  setLoginModalOpen(true);
+                }}
+                primary
+              >
+                Log in
+              </Button>
+            </div>
           )}
-          <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
+          <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange} onClick={handleLogout}>
             {currentUser ? (
               <Image
                 src="https://cpad.ask.fm/450/774/576/-29996968-1tfd7tc-gpggmmc5d0og3a0/original/image.jpg"
@@ -135,6 +159,7 @@ function Header() {
           </Menu>
         </div>
       </div>
+      {loginmodalOpen && <LoginModal setOpenLoginModal={setLoginModalOpen} />}
     </header>
   );
 }

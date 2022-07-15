@@ -22,6 +22,9 @@
   justify-content: space-between;
   padding: 0 var(--default-layout-horizontal-spacer);
 }
+.container-btn-user {
+  display: flex;
+}
 .container-action-btn {
   display: flex;
 }
@@ -90,6 +93,21 @@
     left: 0;
     bottom: 5px;
   }
+  .container-btn-user {
+    margin-left: 10px;
+  }
+  .btn-login {
+    width: 50px;
+    min-width: 0px;
+    margin-right: 5px;
+  }
+  .btn-register {
+    width: 60px;
+    padding: 2px 5px;
+  }
+  .more-btn {
+    margin-left: 5px;
+  }
   .action-btn {
     display: flex;
     font-size: 2.2rem;
@@ -115,6 +133,7 @@
     padding: 4px 10px;
     cursor: pointer;
   }
+
   .badge {
     position: absolute;
     top: -3px;
